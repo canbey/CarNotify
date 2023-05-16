@@ -63,11 +63,13 @@ public class Main {
                         String formattedValue = listPrice.get("formattedValue").getAsString();
                         String message = "https://www.mercedes-benz.com.tr/passengercars/buy/new-car/product.html/"+vehicleId;
                         messageBuilder.append(message).append("\n");
+                        sendTelegramMessage(client, description+" ---  ");
+                        sendTelegramMessage(client,message);
                     }
 
                     String message = messageBuilder.toString();
-                    sendTelegramMessage(client, description+" ---  " +carCount);
-                    sendTelegramMessage(client, message);
+
+                    //sendTelegramMessage(client, message);
                 }else {
                     System.out.println("Product list has not changed!");
                 }
