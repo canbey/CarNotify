@@ -1,5 +1,4 @@
-package org.example;
-import com.sun.javafx.binding.SelectBinding;
+package org.wtech;
 import okhttp3.*;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -16,8 +15,10 @@ public class Main {
     private static final String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36";
     private static final long PERIOD = 5 * 1000L;  // 1 minute
 
-   private static final String TELEGRAM_BOT_TOKEN = "{{telegram_bot_token}}";
-   private static final String TELEGRAM_CHAT_ID = "{{telegram_chat_id}}";
+
+    private static final String TELEGRAM_BOT_TOKEN = System.getenv("TELEGRAM_BOT_TOKEN");
+    private static final String TELEGRAM_CHAT_ID = System.getenv("TELEGRAM_CHAT_ID");
+
 
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
 

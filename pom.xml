@@ -34,7 +34,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.example.Main</mainClass>
+                            <mainClass>org.wtech.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
