@@ -58,10 +58,10 @@ public class Main {
                     for (JsonElement productElement : productList) {
                         JsonObject product = productElement.getAsJsonObject();
                         String description = product.get("description").getAsString();
-                        String vehicleId = product.get("vehicleId").getAsString();
+                        String vehicleId = product.get("code").getAsString();
                         JsonObject listPrice = product.get("listPrice").getAsJsonObject();
                         String formattedValue = listPrice.get("formattedValue").getAsString();
-                        String message = description + " vehicleID: " + vehicleId + " " + formattedValue;
+                        String message = "https://www.mercedes-benz.com.tr/passengercars/buy/new-car/product.html/"+vehicleId;
                         messageBuilder.append(message).append("\n");
                     }
 
