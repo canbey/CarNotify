@@ -53,11 +53,11 @@ public class Main {
                     System.out.println("Product list has changed!");
                     lastProductList = productList;
                     String carCount = productList.size() + "   Sayıda değişiklik oldu yeni araç sayısı";
-
+                    String description = "";
                     StringBuilder messageBuilder = new StringBuilder();
                     for (JsonElement productElement : productList) {
                         JsonObject product = productElement.getAsJsonObject();
-                        String description = product.get("description").getAsString();
+                                description = product.get("description").getAsString();
                         String vehicleId = product.get("code").getAsString();
                         JsonObject listPrice = product.get("listPrice").getAsJsonObject();
                         String formattedValue = listPrice.get("formattedValue").getAsString();
@@ -66,7 +66,7 @@ public class Main {
                     }
 
                     String message = messageBuilder.toString();
-                    sendTelegramMessage(client, carCount);
+                    sendTelegramMessage(client, description+" ---  " +carCount);
                     sendTelegramMessage(client, message);
                 }else {
                     System.out.println("Product list has not changed!");
