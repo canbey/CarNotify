@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.wtech.Make.DogustOto;
 
 import java.io.IOException;
 import java.util.Timer;
@@ -31,6 +32,11 @@ public class Main {
             @Override
             public void run() {
                 fetchProducts();
+                try {
+                    DogustOto.main();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }, 0, PERIOD);
     }
@@ -81,7 +87,7 @@ public class Main {
         }
     }
 
-    private static void sendTelegramMessage(OkHttpClient client, String message) {
+    public static void sendTelegramMessage(OkHttpClient client, String message) {
         String telegramApiUrl = "https://api.telegram.org/" + TELEGRAM_BOT_TOKEN + "/sendMessage";
         String payload = "{ \"chat_id\": \"" + TELEGRAM_CHAT_ID + "\", \"text\": \"" + message + "\" }";
 
