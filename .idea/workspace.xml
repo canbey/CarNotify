@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f24c54e-312d-43ba-950c-2a9891c97260" name="Changes" comment="how to run.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Bmw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Citroen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/DogustOto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Fiat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Peougeot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Renault.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Skoda.java" afterDir="false" />
+    <list default="true" id="7f24c54e-312d-43ba-950c-2a9891c97260" name="Changes" comment="dogus oto module added.&#10;Other makes class added.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/Nissan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/wtech/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/wtech/Make/DogustOto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/wtech/Make/DogustOto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684160186016</updated>
       <workItem from="1684160187504" duration="4398000" />
-      <workItem from="1684217624002" duration="16506000" />
+      <workItem from="1684217624002" duration="17392000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit.">
       <created>1684217975755</created>
@@ -174,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684238737937</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="dogus oto module added.&#10;Other makes class added.">
+      <created>1684410704264</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684410704264</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,9 +199,21 @@
     <MESSAGE value="dockerfiel added." />
     <MESSAGE value="bug fixed." />
     <MESSAGE value="how to run." />
-    <option name="LAST_COMMIT_MESSAGE" value="how to run." />
+    <MESSAGE value="dogus oto module added.&#10;Other makes class added." />
+    <option name="LAST_COMMIT_MESSAGE" value="dogus oto module added.&#10;Other makes class added." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/wtech/Make/DogustOto.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

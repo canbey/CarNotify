@@ -44,7 +44,7 @@ public class DogustOto  {
         Response response = fetch.dogusOtoService("https://www.dogusoto.com.tr/api/vehicle/getvehiclesearch", json);
         if(fetch.dogusCarFound(response)) {
             System.out.println("Volkswagen aracı bulundu");
-            Main.sendTelegramMessage(client,"Volkswagen aracı bulundu");
+            Main.sendTelegramMessage(client,"VOlkswagen aracı bulundu");
         }
         else {
             System.out.println("Volkswagen aracı bulunamadı");

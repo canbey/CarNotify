@@ -14,7 +14,8 @@ public class Main {
 
     private static final String URL = "https://shop.mercedes-benz.com/smsc-backend-os/dcp-api/v2/market-tr/products/search?lang=tr&query=%3Aprice-asc%3AallCategories%3Amarket-tr-vehicles&currentPage=0&pageSize=50&fields=FULL";
     private static final String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36";
-    private static final long PERIOD = 5 * 1000L;  // 1 minute
+    private static final int PERIOD_1 = 5000; // 5 seconds
+    private static final int PERIOD_2 = 216000; // saate 1
 
 
     private static final String TELEGRAM_BOT_TOKEN = System.getenv("TELEGRAM_BOT_TOKEN");
@@ -27,19 +28,27 @@ public class Main {
     private static JsonArray lastProductList = new JsonArray();
 
     public static void main(String[] args) {
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
+        Timer timer1 = new Timer();
+        Timer timer2 = new Timer();
+        timer1.schedule(new TimerTask() {
             @Override
             public void run() {
                 fetchProducts();
-                try {
-                    DogustOto.main();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
             }
-        }, 0, PERIOD);
-    }
+        }, 0, PERIOD_1);
+
+        timer2.schedule(new TimerTask() {
+            @Override
+            public void run() {
+            try {
+                DogustOto.main();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }, 0, PERIOD_2);
+}
+
 
     private static void fetchProducts() {
         OkHttpClient client = new OkHttpClient();
