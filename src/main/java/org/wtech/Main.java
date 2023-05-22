@@ -12,7 +12,7 @@ import java.util.TimerTask;
 
 public class Main {
 
-    private static final String URL = "https://shop.mercedes-benz.com/smsc-backend-os/dcp-api/v2/market-tr/products/search?lang=tr&query=%3Aprice-asc%3AallCategories%3Amarket-tr-vehicles&currentPage=0&pageSize=50&fields=FULL";
+    private static final String URL = "https://shop.mercedes-benz.com/smsc-backend-os/dcp-api/v2/market-tr/products/search?lang=tr&query=%3Aprice-asc%3AallCategories%3Amarket-tr-new-passenger-cars%3ApriceValue%3A%5B1500000%20TO%202400000%5D&currentPage=0&pageSize=40&fields=FULL";
     private static final String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36";
     private static final int PERIOD_1 = 5000; // 5 seconds
     private static final int PERIOD_2 = 216000; // saate 1
